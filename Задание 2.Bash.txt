@@ -1,0 +1,185 @@
+1. Зайти в домашнюю директорию
+
+    Lenovo@DESKTOP-VNOS533 MINGW64 ~
+$ cd
+2. Создать папку test 3
+Lenovo@DESKTOP-VNOS533 MINGW64 ~
+$ mkdir test3
+
+3. Добавить в папку test 3 три файла 4, 5 и 6, в каждом из которых должно быть по 4 строки row1, row2, row3, row4
+Lenovo@DESKTOP-VNOS533 MINGW64 ~
+$ cd test3
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ touch file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ touch file5.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ touch file6.txt
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row1 > file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row1 > file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row3 > file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ touch file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row1 > file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row2 > file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$  touch file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row1 > file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row2 >> file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row3 >> file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row4 >> file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row1 > file5.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row2 >> file5.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row3 >> file5.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row4 >> file5.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row1 > file6.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row2 >> file6.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row3 >> file6.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo row4 >> file6.txt
+4. Найдите строку row2 в файле 5
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ grep -i "row2" file5.txt
+row2
+5. Найдите строку row в папке test3
+Lenovo@DESKTOP-VNOS533 MINGW64 ~
+$ cd test3
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ grep -R "row"
+file4.txt:row1
+file4.txt:row2
+file4.txt:row3
+file4.txt:row4
+file5.txt:row1
+file5.txt:row2
+file5.txt:row3
+file5.txt:row4
+file6.txt:row1
+file6.txt:row2
+file6.txt:row3
+file6.txt:row4
+6. Посчитайте сколько строк с содержимым row в файле 6
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ grep -c "row" file6.txt
+4
+7. Найдите файл 5 внутри папки test3
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ find "file5.txt"
+file5.txt
+8. Используя команду find, удалите файл 5
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ find "file5.txt" -delete
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ ls
+file4.txt  file6.txt
+9. Используя команду echo, добавьте слово test в файл 4
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo test > file4.txt
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ cat file4.txt
+test
+10. Замените слово test в файле 4 на fail
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ nano file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ cat file4.txt
+fail
+11. Добавьте в файл 4 слово test так, чтобы сохранилось содержимое
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ echo test >> file4.txt
+
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ cat file4.txt
+fail
+test
+12. Просмотрите все процессы для юзеров не только в консоли, которые происходят в системе
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ ps aux
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+      654     542     654       6580  cons0     197609 16:07:33 /usr/bin/ps
+      542       1     542       5160  cons0     197609 15:24:19 /usr/bin/bash
+13. Убейте процесс 666 в консоли
+Lenovo@DESKTOP-VNOS533 MINGW64 ~/test3
+$ kill 666
+bash: kill: (666) - No such process
+14. Узнайте доступность ресурса artsiomrusau.com, используя ping
+Lenovo@DESKTOP-VNOS533 MINGW64 ~
+$ ping artsiomrusau.com
+
+Обмен пакетами с artsiomrusau.com [185.215.4.92] с 32 байтами данных:
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+
+Статистика Ping для 185.215.4.92:
+    Пакетов: отправлено = 4, получено = 0, потеряно = 4
+    (100% потерь)
+15. Отправьте 5 пакетов на сайт artsiomrusau.com
+Lenovo@DESKTOP-VNOS533 MINGW64 ~
+$ ping -n 5 artsiomrusau.com
+
+Обмен пакетами с artsiomrusau.com [185.215.4.92] с 32 байтами данных:
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+
+Статистика Ping для 185.215.4.92:
+    Пакетов: отправлено = 5, получено = 0, потеряно = 5
+    (100% потерь)
+16. Используя GET и команду curl, получите информацию о зарегистрированных питомцах на https://petstore.swagger.io/
+Lenovo@DESKTOP-VNOS533 MINGW64 ~
+$ curl https://petstore.swagger.io/v2/pet/findByStatus?status=available
+[{"id":9223372036854292862,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854292863,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854292864,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854292865,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["strin etc. 
+17. Используя POST и команду curl, создайте нового пользователя на https://petstore.swagger.io/
+Lenovo@DESKTOP-VNOS533 MINGW64 ~
+$ curl -X 'POST' \
+>   'https://petstore.swagger.io/v2/pet/333' \
+>   -H 'accept: application/json' \
+>   -H 'Content-Type: application/x-www-form-urlencoded' \
+>   -d 'name=Rob&status=pending'
+{"code":200,"type":"unknown","message":"333"}
+
